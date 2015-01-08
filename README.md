@@ -1,3 +1,18 @@
+Setup COS64 as Scan Target
+- download DVD toget older code
+- install mysql cleint mysql server web server, php servlet 
+- download from mirror with updates php-mysql for mysqli library
+  http://mirror.nsc.liu.se/centos-store/6.4/updates/i386/Packages/php-mysql-5.3.3-23.el6_4.i686.rpm
+  install with RPM -Uvh --nodpes --force
+- create user qscanner/qscanner, usermod -G wheel qscanner, visudo uncomment wheel
+- copy hb to /var/www/hb change /etc/httpd/conf.d/ssl.conf uncomment DocRoot and point to hb
+- copy shellshock to /var/www/html and add README.md at end of httpd.conf
+- mysqladmin -u root password heartbleed
+- mysql -u root mysql - create database hb;
+- /etc/sysconfig/network-scripts onboot = on for eth0
+- /etc/sysconfig/iptables delete all rules 
+
+
 Setup UbuWS as Scan Target
 
 - Ubuntu 12.04 LTS no updates
