@@ -1,5 +1,20 @@
-Setup UbuWS as Scan Target
+Setup COS65 as Scan Target
+- download DVD to get older code 64 bit (32 bit did not work well with AWS)
+- install mysql client mysql server web server, php - also php-mysql in the options 
+- create user qscanner/qscanner, usermod -G wheel qscanner, visudo uncomment wheel
+- disable SELINUX in /etc/sysconfig/selinux
+- copy hb to /var/www/hb change /etc/httpd/conf.d/ssl.conf uncomment DocRoot and point to hb
+- copy shellshock to /var/www/html and add README.md at end of httpd.conf (add html to Dcoroot)
+- mysqladmin -u root password heartbleed
+- mysql -u root mysql - create database hb;
+- /etc/sysconfig/network-scripts onboot = on for eth0
+- /etc/sysconfig/iptables delete all rules - add rules from README.md
+- chkconfig --level 3 mysqld and also httpd
+- tomcat6 installed - bodgeit.war in /var/lib/tomcat6/webapps
+- demo1.key and demo1.crt installed in /etc/pki/tls/certs and private, generated on debian etch (weak RND) with 1024 bits
+  /etc/ssl/conf.d/ssl.conf configured to use those certs
 
+Setup UbuWS as Scan Target
 - Ubuntu 12.04 LTS no updates
 - only openssh server
 - user: user1/password1 has sudo
