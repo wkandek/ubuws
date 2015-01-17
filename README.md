@@ -19,7 +19,9 @@ Setup UbuWS as Scan Target
 
 - for Bodge IT app under Tomcat
   - tomcat7
-  - install BodgeIT code (bodgeit.war) to /var/.../webapps
+  - install BodgeIT code (bodgeit.war) to /var/lib/tomcat7/webapps
+  - get from github wkandek bodgeit
 
-- for HB webapp: mysql-server php5-mysql libapache2-mod-php5
+- for HB webapp: mysql-server php5-mysql libapache2-mod-php5 unzip
+  - logrotation to weekly 7 in /etc/logrotate.d/apache2
 
