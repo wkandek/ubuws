@@ -4,7 +4,7 @@ Setup COS65 as Scan Target
 - create user qscanner/qscanner, usermod -G wheel qscanner, visudo uncomment wheel
 - disable SELINUX in /etc/sysconfig/selinux
 - copy hb to /var/www/hb change /etc/httpd/conf.d/ssl.conf uncomment DocRoot and point to hb
-- copy shellshock to /var/www/html and add README.md at end of httpd.conf (add html to Dcoroot)
+- copy shellshock to /var/www/html and add README.md at end of httpd.conf (add html to Docroot)
 - mysqladmin -u root password heartbleed
 - mysql -u root mysql - create database hb;
 - /etc/sysconfig/network-scripts onboot = on for eth0
@@ -13,6 +13,11 @@ Setup COS65 as Scan Target
 - tomcat6 installed - bodgeit.war in /var/lib/tomcat6/webapps
 - demo1.key and demo1.crt installed in /etc/pki/tls/certs and private, generated on debian etch (weak RND) with 1024 bits
   /etc/ssl/conf.d/ssl.conf configured to use those certs
+- wordpress added
+  - wp db created - wp-config.php added db credentials 
+  - mkdir wordpress in /var/www/html - unzip code 3.9.2
+  - run once create admin/admin user, add content
+  - index.php added to index.cgi line - index.html added
 
 Setup UbuWS as Scan Target
 - Ubuntu 12.04 LTS no updates
